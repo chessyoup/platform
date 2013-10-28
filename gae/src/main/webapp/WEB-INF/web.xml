@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+	<servlet>
+		<servlet-name>mvc-dispatcher</servlet-name>
+		<servlet-class>
+			org.springframework.web.servlet.DispatcherServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>mvc-dispatcher</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/mvc-dispatcher-servlet.xml</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+
+	<!--servlet>
+		<servlet-name>RTCWebDCN</servlet-name>
+		<servlet-class>com.chessyoup.RTCWebDCNServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RTCWebDCN</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RegisterStudentServlet</servlet-name>
+		<servlet-class>com.chessyoup.RegisterStudentServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RegisterStudentServlet</servlet-name>
+		<url-pattern>/register/student</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RegisterTeacherServlet</servlet-name>
+		<servlet-class>com.chessyoup.RegisterTeacherServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RegisterTeacherServlet</servlet-name>
+		<url-pattern>/register/teacher</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MessageServlet</servlet-name>
+		<servlet-class>com.chessyoup.MessageServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MessageServlet</servlet-name>
+		<url-pattern>/message</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DisconnectServlet</servlet-name>
+		<servlet-class>com.chessyoup.DisconnectServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DisconnectServlet</servlet-name>
+		<url-pattern>/_ah/channel/disconnected/</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ConnectServlet</servlet-name>
+		<servlet-class>com.chessyoup.ConnectServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConnectServlet</servlet-name>
+		<url-pattern>/_ah/channel/connected/</url-pattern>
+	</servlet-mapping-->
+
+</web-app>
